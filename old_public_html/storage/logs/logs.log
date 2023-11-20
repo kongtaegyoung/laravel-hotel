@@ -1,0 +1,50 @@
+Error: Class "App\Services\ImageService" not found in /home/newpinfactory/public_html/app/Controllers/ImageController.php:19
+Stack trace:
+#0 [internal function]: App\Controllers\ImageController::store()
+#1 /home/newpinfactory/public_html/src/Routing/Route.php(24): call_user_func('\\App\\Controller...')
+#2 /home/newpinfactory/public_html/app/Providers/RouteServiceProvider.php(20): Eclair\Routing\Route::run()
+#3 /home/newpinfactory/public_html/src/Application.php(20): App\Providers\RouteServiceProvider::boot()
+#4 [internal function]: Eclair\Application->Eclair\{closure}('App\\Providers\\R...', 4)
+#5 /home/newpinfactory/public_html/src/Application.php(20): array_walk(Array, Object(Closure))
+#6 /home/newpinfactory/public_html/public/index.php(7): Eclair\Application->boot()
+#7 {main}
+Error: Class "App\Services\ImageService" not found in /home/newpinfactory/public_html/app/Controllers/ImageController.php:19
+Stack trace:
+#0 [internal function]: App\Controllers\ImageController::store()
+#1 /home/newpinfactory/public_html/src/Routing/Route.php(24): call_user_func('\\App\\Controller...')
+#2 /home/newpinfactory/public_html/app/Providers/RouteServiceProvider.php(20): Eclair\Routing\Route::run()
+#3 /home/newpinfactory/public_html/src/Application.php(20): App\Providers\RouteServiceProvider::boot()
+#4 [internal function]: Eclair\Application->Eclair\{closure}('App\\Providers\\R...', 4)
+#5 /home/newpinfactory/public_html/src/Application.php(20): array_walk(Array, Object(Closure))
+#6 /home/newpinfactory/public_html/public/index.php(7): Eclair\Application->boot()
+#7 {main}
+Error: Class "App\Services\ImageService" not found in /home/newpinfactory/public_html/app/Controllers/ImageController.php:19
+Stack trace:
+#0 [internal function]: App\Controllers\ImageController::store()
+#1 /home/newpinfactory/public_html/src/Routing/Route.php(24): call_user_func('\\App\\Controller...')
+#2 /home/newpinfactory/public_html/app/Providers/RouteServiceProvider.php(20): Eclair\Routing\Route::run()
+#3 /home/newpinfactory/public_html/src/Application.php(20): App\Providers\RouteServiceProvider::boot()
+#4 [internal function]: Eclair\Application->Eclair\{closure}('App\\Providers\\R...', 4)
+#5 /home/newpinfactory/public_html/src/Application.php(20): array_walk(Array, Object(Closure))
+#6 /home/newpinfactory/public_html/public/index.php(7): Eclair\Application->boot()
+#7 {main}
+Error: Class "App\Services\ImageService" not found in /home/newpinfactory/public_html/app/Controllers/ImageController.php:19
+Stack trace:
+#0 [internal function]: App\Controllers\ImageController::store()
+#1 /home/newpinfactory/public_html/src/Routing/Route.php(24): call_user_func('\\App\\Controller...')
+#2 /home/newpinfactory/public_html/app/Providers/RouteServiceProvider.php(20): Eclair\Routing\Route::run()
+#3 /home/newpinfactory/public_html/src/Application.php(20): App\Providers\RouteServiceProvider::boot()
+#4 [internal function]: Eclair\Application->Eclair\{closure}('App\\Providers\\R...', 4)
+#5 /home/newpinfactory/public_html/src/Application.php(20): array_walk(Array, Object(Closure))
+#6 /home/newpinfactory/public_html/public/index.php(7): Eclair\Application->boot()
+#7 {main}
+Error: Class "App\Services\ImageService" not found in /home/newpinfactory/public_html/app/Controllers/ImageController.php:30
+Stack trace:
+#0 [internal function]: App\Controllers\ImageController::store()
+#1 /home/newpinfactory/public_html/src/Routing/Route.php(24): call_user_func('\\App\\Controller...')
+#2 /home/newpinfactory/public_html/app/Providers/RouteServiceProvider.php(20): Eclair\Routing\Route::run()
+#3 /home/newpinfactory/public_html/src/Application.php(20): App\Providers\RouteServiceProvider::boot()
+#4 [internal function]: Eclair\Application->Eclair\{closure}('App\\Providers\\R...', 4)
+#5 /home/newpinfactory/public_html/src/Application.php(20): array_walk(Array, Object(Closure))
+#6 /home/newpinfactory/public_html/public/index.php(7): Eclair\Application->boot()
+#7 {main}

@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>핀팩토리</title>
+
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="/css/common.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <script src="/js/jquery-1.12.4.min.js"></script>
+    <script src="/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/c56cffabac.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/js/nav.js"></script>
+    <script src="/js/main.js"></script>
+  </head>
+  <body>
+    <div id="wrap">
+      <header id="header">
+        <div class="inner">
+          <div class="header-top">
+            <h1>
+              <a href="/"><img src="/img/logo.png" alt="" /></a>
+            </h1>
+
+            <div class="m_wrapper_btn">
+              <div class="m_menu_ico">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="header-bottom">
+            <h2><span>로그인</span>을 해주세요</h2>
+
+            <ul>
+              <li><a href="#!">로그인</a></li>
+              <!-- <li><a href="#!">로그아웃</a></li>
+                            <li><a href="#!">마이페이지</a></li> -->
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      <div class="mgnb_wrap" id="mgnbWrap">
+        <nav>
+          <ul id="mgnb" class="mgnb">
+            <li>
+              <a href="<?=G5_BBS_URL?>/board.php?bo_table=notice">
+                <figure>
+                  <img src="/img/menu-ico-notice.png" alt="" />
+                  <figcaption>공지사항</figcaption>
+                </figure>
+              </a>
+            </li>
+            <li>
+              <a href="<?=G5_BBS_URL?>/faq.php">
+                <figure>
+                  <img src="/img/menu-ico-faq.png" alt="" />
+                  <figcaption>FAQ</figcaption>
+                </figure>
+              </a>
+            </li>
+            <li>
+              <a href="<?=G5_SHOP_URL?>/orderinquiry.php">
+                <figure>
+                  <img src="/img/menu-ico-barcord.png" alt="" />
+                  <figcaption>구매코드 확인</figcaption>
+                </figure>
+              </a>
+            </li>
+            <li>
+              <a href="<?/*=G5_SHOP_URL*/?>/orderinquiry.sub.php">
+                <figure>
+                  <img src="/img/menu-ico-coupon.png" alt="" />
+                  <figcaption>구매 상품권</figcaption>
+                </figure>
+              </a>
+            </li>
+            <li>
+              <a href="<?=G5_SHOP_URL?>/cart.php">
+                <figure>
+                  <img src="/img/menu-ico-cart.png" alt="" />
+                  <figcaption>장바구니</figcaption>
+                </figure>
+              </a>
+            </li>
+            <li>
+              <a href="<?=G5_SHOP_URL?>/mypage.php">
+                <figure>
+                  <img src="/img/menu-ico-mypage.png" alt="" />
+                  <figcaption>마이페이지</figcaption>
+                </figure>
+              </a>
+            </li>
+          </ul>
+
+          <div class="m-bottom-btn">
+            <a href="<?=G5_BBS_URL?>/member_confirm.php?url=register_form.php"
+              >개인정보 수정하기</a
+            >
+            <!-- <a href="#!">회원탈퇴하기</a>-->
+            <a
+              href="<?php echo G5_BBS_URL; ?>/member_confirm.php?url=member_leave.php"
+              onclick="return member_leave2();"
+              class="btn_out"
+              >탈퇴하기</a
+            >
+          </div>
+        </nav>
+      </div>
+
+      <main id="container">
+        <section id="sub-visual">
+          <figure>
+            <img src="/img/google-gift-bg.png" alt="" />
+          </figure>
+          <div class="sub-tit">
+            <h2>구글기프트카드</h2>
+            <p>구글 기프트 카드 할인 충전하세요.</p>
+          </div>
+        </section>
+
+        <section id="sub-cont">
+          <article class="sbbn">
+            <ul>
+              <li>
+                <a href="#!">
+                  <div>
+                    <figure>
+                      <img src="/img/ico-barcode.png" alt="" />
+                    </figure>
+                    <em>구매코드 확인</em>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </article>
+
+          <div class="item-form">
+            <form action="">
+              <header>
+                <b class="bold">구글기프트</b>
+                <ul class="sale">
+                  <li class="blue">
+                    계좌이체 <span class="text-white blue-bg">최대 10%</span>
+                  </li>
+                  <li class="green">
+                    카드 <span class="text-white green-bg">최대 10%</span>
+                  </li>
+                  <li class="orange">
+                    휴대폰 <span class="text-white orange-bg">최대 10%</span>
+                  </li>
+                </ul>
+              </header>
+
+              <div class="item-body">
+                <figure>
+                  <img src="/img/item01.png" alt="google gift card" />
+                </figure>
+
+                <div class="item-notice">
+                  <h3>
+                    <i><img src="/img/ico-item-notice.png" alt="" /></i> 구매 전
+                    공지
+                  </h3>
+                  <ul>
+                    <li>
+                      - 상품권은 PIN번호 발권 후에는
+                      <span>교환,취소,환불이 불가</span>합니다.
+                    </li>
+
+                    <li>
+                      - 한번의 주문에 계좌이체, 카드결제, 휴대폰 결제를
+                      <span>중복으로 사용불가</span>합니다.
+                    </li>
+
+                    <li>
+                      - <span>장바구니 담기</span>는 똑같은 결제 방식의 상품만
+                      담을 수 있습니다.
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="inputs">
+                  <div class="pay-way">
+                    <b>결제방법</b>
+                    <ul>
+                      <li class="on">
+                        <label
+                          ><input
+                            hidden
+                            type="radio"
+                            name="payWay"
+                            checked
+                          />계좌이체<br />(무통장입금)</label
+                        >
+                      </li>
+                      <li>
+                        <label
+                          ><input
+                            hidden
+                            type="radio"
+                            name="payWay"
+                          />카드결제</label
+                        >
+                      </li>
+                      <li>
+                        <label
+                          ><input hidden type="radio" name="payWay" />휴대폰
+                          결제</label
+                        >
+                      </li>
+                    </ul>
+
+                    <script>
+                      $(".pay-way ul li").click(function () {
+                        $(".pay-way ul li").removeClass("on");
+                        $(this).addClass("on");
+                      });
+                    </script>
+                  </div>
+                  <div class="purchase-count">
+                    <b>구매수량</b>
+                    <ul class="count-ctrl">
+                      <li>
+                        <p class="price">상품권</p>
+                        <div class="saled-price">구매금액</div>
+                        <div class="ctrller">수량</div>
+                      </li>
+                      <li>
+                        <p class="price">5,000원</p>
+                        <div class="saled-price">4,980 원</div>
+                        <div class="ctrller">
+                          <a href="#!" class="decrease"
+                            ><img src="/img/minus.png" alt="감소"
+                          /></a>
+                          <input type="number" value="0" />
+                          <a href="#!" class="increase"
+                            ><img src="/img/plus.png" alt="증가"
+                          /></a>
+                        </div>
+                      </li>
+                      <li>
+                        <p class="price">5,000원</p>
+                        <div class="saled-price">4,980 원</div>
+                        <div class="ctrller">
+                          <a href="#!" class="decrease"
+                            ><img src="/img/minus.png" alt="감소"
+                          /></a>
+                          <input type="number" value="0" />
+                          <a href="#!" class="increase"
+                            ><img src="/img/plus.png" alt="증가"
+                          /></a>
+                        </div>
+                      </li>
+                      <li>
+                        <p class="price">5,000원</p>
+                        <div class="saled-price">4,980 원</div>
+                        <div class="ctrller">
+                          <a href="#!" class="decrease"
+                            ><img src="/img/minus.png" alt="감소"
+                          /></a>
+                          <input type="number" value="0" />
+                          <a href="#!" class="increase"
+                            ><img src="/img/plus.png" alt="증가"
+                          /></a>
+                        </div>
+                      </li>
+                      <li>
+                        <p class="price">5,000원</p>
+                        <div class="saled-price">4,980 원</div>
+                        <div class="ctrller">
+                          <a href="#!" class="decrease"
+                            ><img src="/img/minus.png" alt="감소"
+                          /></a>
+                          <input type="number" value="0" />
+                          <a href="#!" class="increase"
+                            ><img src="/img/plus.png" alt="증가"
+                          /></a>
+                        </div>
+                      </li>
+                      <li>
+                        <p class="price">5,000원</p>
+                        <div class="saled-price">4,980 원</div>
+                        <div class="ctrller">
+                          <a href="#!" class="decrease"
+                            ><img src="/img/minus.png" alt="감소"
+                          /></a>
+                          <input type="number" value="0" />
+                          <a href="#!" class="increase"
+                            ><img src="/img/plus.png" alt="증가"
+                          /></a>
+                        </div>
+                      </li>
+                      <li>
+                        <p class="price">5,000원</p>
+                        <div class="saled-price">4,980 원</div>
+                        <div class="ctrller">
+                          <a href="#!" class="decrease"
+                            ><img src="/img/minus.png" alt="감소"
+                          /></a>
+                          <input type="number" value="0" />
+                          <a href="#!" class="increase"
+                            ><img src="/img/plus.png" alt="증가"
+                          /></a>
+                        </div>
+                      </li>
+                      <li>
+                        <p class="price">5,000원</p>
+                        <div class="saled-price">4,980 원</div>
+                        <div class="ctrller">
+                          <a href="#!" class="decrease"
+                            ><img src="/img/minus.png" alt="감소"
+                          /></a>
+                          <input type="number" value="0" />
+                          <a href="#!" class="increase"
+                            ><img src="/img/plus.png" alt="증가"
+                          /></a>
+                        </div>
+                      </li>
+                    </ul>
+
+                    <script>
+                      $(".decrease").click(function () {
+                        var input = $(this).siblings('input[type="number"]');
+                        var value = parseInt(input.val()) - 1;
+                        if (value >= 0) {
+                          input.val(value);
+                        }
+                      });
+
+                      // "증가" 버튼 클릭 시
+                      $(".increase").click(function () {
+                        var input = $(this).siblings('input[type="number"]');
+                        var value = parseInt(input.val()) + 1;
+                        input.val(value);
+                      });
+                    </script>
+                  </div>
+                </div>
+              </div>
+
+              <div class="item-footer">
+                <div class="item-form-end">
+                  <div class="total">
+                    <p>총 결제금액:</p>
+                    <p><span>4,980</span>원</p>
+                  </div>
+                  <div class="buttons">
+                    <button type="button">바로 구매하기</button>
+                    <button type="button" class="cart">장바구니</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="item-datail">
+            <ul class="item-datail-tab">
+              <li><a href="#!" class="on">제품상세</a></li>
+              <li><a href="#!">리뷰</a></li>
+            </ul>
+            <script>
+              $(".item-datail-tab li").click(function () {
+                $(".item-datail-tab li").removeClass("on");
+                $(this).addClass("on");
+              });
+            </script>
+
+            <div class="item-datil-wrap">
+              <article>
+                <img src="/img/detail.png" alt="" />
+              </article>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer id="footer">
+        <div class="footer-top">
+          <div class="inner">
+            <figure>
+              <img src="/img/saletime.png" alt="" />
+              <figcaption>
+                홈페이지 판매
+                <br />
+                <span>연중 무휴 24시간 자동 운영</span>
+              </figcaption>
+            </figure>
+
+            <div class="counseling">
+              <figure>
+                <img src="/img/ico-counseling2.png" alt="" />
+                <figcaption>010-9351-5185</figcaption>
+              </figure>
+
+              <ul>
+                <li>
+                  상담원 연락 가능 시간 : 오전 10시 ~ 새벽 1시 <br />(전화,
+                  문자, 카카오톡)
+                </li>
+                <li>
+                  그 외 시간은 <span>1:1 문의</span>를 통해 상담 요청
+                  가능합니다.
+                </li>
+              </ul>
+
+              <a href="#!">1:1 문의 바로가기</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="fb-top">
+            <div class="inner">
+              <figure>
+                <img src="/img/logo.png" alt="" />
+              </figure>
+
+              <ul>
+                <li>
+                  <a href="#!">
+                    <img src="/img/ico-facebook.png" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="#!">
+                    <img src="/img/ico-instagram.png" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="#!">
+                    <img src="/img/ico-youtube.png" alt="" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="fb-mid">
+            <div class="inner">
+              <ul>
+                <li><a href="#!">회사소개</a></li>
+                <li><a href="#!">이용약관</a></li>
+                <li><a href="#!">상품권 이용약관</a></li>
+                <li><a href="#!">개인정보처리 방침</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="fb-bot">
+            <div class="inner">
+              <p>통신판매업신고번호 : 제 2017-성남분당-0873호</p>
+
+              <p><a href="#!">[사업자정보확인]</a></p>
+
+              <p>
+                주소 : 경기도 성남시 분당구 백현로 97,12층 1233호(수내동
+                수내동다운 타운) | 대표번호 : 010-9351-5185 | 카카오톡 ID :
+                pinfactory55 이메일 : pinfactory55@gmail.com
+              </p>
+            </div>
+          </div>
+          <p class="copy">Copyright. ⓒ 핀팩토리. All Rights Reserved.</p>
+        </div>
+      </footer>
+      <div class="gotop">
+        <a href="#">
+          <img src="/img/top-btn.png" alt="" />
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,107 @@
+@charset "utf-8";
+
+.inner {
+  max-width: 1720px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.inner02 {
+  max-width: 1400px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.clearfix::after {
+ content: '';
+ display: block;
+ clear: both;
+}
+
+
+/* 여백초기화 */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+
+/* img 최대크기 */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+
+/* 테이블 선 중첩 */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+
+/* 하이퍼링크 초기화 */
+a {
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* 목록스타일 초기화 */
+ol,
+ul {
+  list-style: none;
+}
+
+/* 글자 기울임 초기화 */
+address,
+em,
+i {
+  font-style: normal;
+}
+
+
+/* body 초기화 */
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+
+
+
+/* 수직정렬 */
+img,
+input,
+select,
+textarea {
+  vertical-align: middle;
+}
+
+
+/* 버튼 */
+button {
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+/* input 텍스트 상속 */
+select,
+input,
+textarea,
+button {
+  font: inherit;
+}
+

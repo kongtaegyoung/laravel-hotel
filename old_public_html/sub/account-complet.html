@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>핀팩토리</title>
+
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="/css/common.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <script src="/js/jquery-1.12.4.min.js"></script>
+    <script src="/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/c56cffabac.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/js/nav.js"></script>
+    <script src="/js/main.js"></script>
+  </head>
+  <body>
+    <div id="wrap">
+      <header id="header">
+        <div class="inner">
+          <div class="header-top">
+            <h1>
+              <a href="/"><img src="/img/logo.png" alt="" /></a>
+            </h1>
+
+            <div class="m_wrapper_btn">
+              <div class="m_menu_ico">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="header-bottom">
+            <h2><span>로그인</span>을 해주세요</h2>
+
+            <ul>
+              <li><a href="#!">로그인</a></li>
+              <!-- <li><a href="#!">로그아웃</a></li>
+                            <li><a href="#!">마이페이지</a></li> -->
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      <div class="mgnb_wrap" id="mgnbWrap">
+        <nav>
+          <ul id="mgnb" class="mgnb">
+            <li>
+              <a href="<?=G5_BBS_URL?>/board.php?bo_table=notice">
+                <figure>
+                  <img src="/img/menu-ico-notice.png" alt="" />
+                  <figcaption>공지사항</figcaption>
+                </figure>
+              </a>
+            </li>
+            <li>
+              <a href="<?=G5_BBS_URL?>/faq.php">
+                <figure>
+                  <img src="/img/menu-ico-faq.png" alt="" />
+                  <figcaption>FAQ</figcaption>
+                </figure>
+              </a>
+            </li>
+            <li>
+              <a href="<?=G5_SHOP_URL?>/orderinquiry.php">
+                <figure>
+                  <img src="/img/menu-ico-barcord.png" alt="" />
+                  <figcaption>구매코드 확인</figcaption>
+                </figure>
+              </a>
+            </li>
+            <li>
+              <a href="<?/*=G5_SHOP_URL*/?>/orderinquiry.sub.php">
+                <figure>
+                  <img src="/img/menu-ico-coupon.png" alt="" />
+                  <figcaption>구매 상품권</figcaption>
+                </figure>
+              </a>
+            </li>
+            <li>
+              <a href="<?=G5_SHOP_URL?>/cart.php">
+                <figure>
+                  <img src="/img/menu-ico-cart.png" alt="" />
+                  <figcaption>장바구니</figcaption>
+                </figure>
+              </a>
+            </li>
+            <li>
+              <a href="<?=G5_SHOP_URL?>/mypage.php">
+                <figure>
+                  <img src="/img/menu-ico-mypage.png" alt="" />
+                  <figcaption>마이페이지</figcaption>
+                </figure>
+              </a>
+            </li>
+          </ul>
+
+          <div class="m-bottom-btn">
+            <a href="<?=G5_BBS_URL?>/member_confirm.php?url=register_form.php"
+              >개인정보 수정하기</a
+            >
+            <!-- <a href="#!">회원탈퇴하기</a>-->
+            <a
+              href="<?php echo G5_BBS_URL; ?>/member_confirm.php?url=member_leave.php"
+              onclick="return member_leave2();"
+              class="btn_out"
+              >탈퇴하기</a
+            >
+          </div>
+        </nav>
+      </div>
+
+      <main id="container">
+        <section id="sub-visual">
+          <figure>
+            <img src="/img/order-comp-bg.png" alt="" />
+          </figure>
+          <div class="sub-tit">
+            <h2>주문 완료</h2>
+            <p>주문 내역을 확인하세요!</p>
+          </div>
+        </section>
+
+        <section id="sub-cont">
+          <article class="sbbn">
+            <ul>
+              <li>
+                <a href="#!">
+                  <div>
+                    <figure>
+                      <img src="/img/ico-barcode.png" alt="" />
+                    </figure>
+                    <em>구매코드 확인</em>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </article>
+
+          <article class="order-complete">
+            <h2>주문이 완료되었습니다.</h2>
+            <p>주문번호 | 2023010522401264</p>
+          </article>
+
+          <article class="order-list">
+            <h3>주문하신 상품</h3>
+
+            <ul>
+              <li>
+                <figure>
+                  <img src="/img/item-list01.png" alt="" />
+                </figure>
+                <dl>
+                  <dt>(5%)온라인컬쳐랜드 1만원권</dt>
+                  <dd>
+                    <ul>
+                      <li>총 수량 : <em>1</em></li>
+                      <li>판매가 : <em>10,000</em></li>
+                      <li>소계 : <em>10,000</em></li>
+                      <li>적립포인트 : <em class="orange">10</em></li>
+                    </ul>
+                  </dd>
+                </dl>
+              </li>
+              <li>
+                <figure>
+                  <img src="/img/item-list01.png" alt="" />
+                </figure>
+                <dl>
+                  <dt>(5%)온라인컬쳐랜드 1만원권</dt>
+                  <dd>
+                    <ul>
+                      <li>총 수량 : <em>1</em></li>
+                      <li>판매가 : <em>10,000</em></li>
+                      <li>소계 : <em>10,000</em></li>
+                      <li>적립포인트 : <em class="orange">10</em></li>
+                    </ul>
+                  </dd>
+                </dl>
+              </li>
+              <li>
+                <figure>
+                  <img src="/img/item-list01.png" alt="" />
+                </figure>
+                <dl>
+                  <dt>(5%)온라인컬쳐랜드 1만원권</dt>
+                  <dd>
+                    <ul>
+                      <li>총 수량 : <em>1</em></li>
+                      <li>판매가 : <em>10,000</em></li>
+                      <li>소계 : <em>10,000</em></li>
+                      <li>적립포인트 : <em class="orange">10</em></li>
+                    </ul>
+                  </dd>
+                </dl>
+              </li>
+            </ul>
+          </article>
+
+          <!-- 계좌이체일 경우 -->
+          <article class="order-payment">
+            <b>결제수단</b>
+            <h3>계좌이체(무통장입금)</h3>
+
+            <ul>
+              <li>
+                <dl>
+                  <dt>보유포인트</dt>
+                  <dd>162 <span>점</span></dd>
+                </dl>
+              </li>
+              <li>
+                <dl>
+                  <dt>
+                    <em>사용가능 포인트</em> <span>(10점단위 사용가능)</span>
+                  </dt>
+                  <dd class="orange">0 <span>점</span></dd>
+                </dl>
+              </li>
+            </ul>
+
+            <div class="point">
+              <label for="">사용 포인트</label>
+              <div>
+                <p>10,000</p>
+                <i>점</i>
+              </div>
+            </div>
+          </article>
+
+          <!-- 카드결제 & 모바일결제일 경우 -->
+          <article class="order-payment">
+            <b>결제수단</b>
+            <h3>카드결제<!-- 휴대폰 결제 --></h3>
+          </article>
+
+
+
+
+          <!-- 계좌이체일 경우에만 -->
+          <article class="order-payment">
+            <b>결제정보</b>
+            <h4>국민 270-901-04-181-549 김제형</h4>
+
+            <div class="order-info">
+              <dl>
+                <dt>입금자명</dt>
+                <dd>홍길동</dd>
+              </dl>
+
+              <dl class="b-line">
+                <dt>환불계좌</dt>
+                <dd>국민 270-123-45-678-910</dd>
+
+                <dt class="mn">예금주명</dt>
+                <dd>홍길동</dd>
+              </dl>
+            </div>
+          </article>
+
+
+
+
+
+
+
+
+          <article class="order-total">
+            <dl>
+              <dt>주문 :</dt>
+              <dd>60,000 원</dd>
+            </dl>
+            <dl>
+              <dt>포인트 사용 :</dt>
+              <dd>- 10,000 원</dd>
+            </dl>
+            <dl class="total">
+              <dt>총 결제금액 :</dt>
+              <dd>50,000 <span>원</span></dd>
+            </dl>
+
+            <div class="btn-wrap comp">
+              <button>홈으로</button>
+              <button class="code-check">구매코드 확인하기</button>
+            </div>
+          </article>
+        </section>
+      </main>
+
+      <footer id="footer">
+        <div class="footer-top">
+          <div class="inner">
+            <figure>
+              <img src="/img/saletime.png" alt="" />
+              <figcaption>
+                홈페이지 판매
+                <br />
+                <span>연중 무휴 24시간 자동 운영</span>
+              </figcaption>
+            </figure>
+
+            <div class="counseling">
+              <figure>
+                <img src="/img/ico-counseling2.png" alt="" />
+                <figcaption>010-9351-5185</figcaption>
+              </figure>
+
+              <ul>
+                <li>
+                  상담원 연락 가능 시간 : 오전 10시 ~ 새벽 1시 <br />(전화,
+                  문자, 카카오톡)
+                </li>
+                <li>
+                  그 외 시간은 <span>1:1 문의</span>를 통해 상담 요청
+                  가능합니다.
+                </li>
+              </ul>
+
+              <a href="#!">1:1 문의 바로가기</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="fb-top">
+            <div class="inner">
+              <figure>
+                <img src="/img/logo.png" alt="" />
+              </figure>
+
+              <ul>
+                <li>
+                  <a href="#!">
+                    <img src="/img/ico-facebook.png" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="#!">
+                    <img src="/img/ico-instagram.png" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="#!">
+                    <img src="/img/ico-youtube.png" alt="" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="fb-mid">
+            <div class="inner">
+              <ul>
+                <li><a href="#!">회사소개</a></li>
+                <li><a href="#!">이용약관</a></li>
+                <li><a href="#!">상품권 이용약관</a></li>
+                <li><a href="#!">개인정보처리 방침</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="fb-bot">
+            <div class="inner">
+              <p>통신판매업신고번호 : 제 2017-성남분당-0873호</p>
+
+              <p><a href="#!">[사업자정보확인]</a></p>
+
+              <p>
+                주소 : 경기도 성남시 분당구 백현로 97,12층 1233호(수내동
+                수내동다운 타운) | 대표번호 : 010-9351-5185 | 카카오톡 ID :
+                pinfactory55 이메일 : pinfactory55@gmail.com
+              </p>
+            </div>
+          </div>
+          <p class="copy">Copyright. ⓒ 핀팩토리. All Rights Reserved.</p>
+        </div>
+      </footer>
+      <div class="gotop">
+        <a href="#">
+          <img src="/img/top-btn.png" alt="" />
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
